@@ -73,7 +73,8 @@ public class PartieMonoJoueur {
      *         est fini
      */
     public int numeroProchainLancer() {
-        return estTerminee() ? 0 : tourCourant.getBoulesLancees() + 1;
+        return estTerminee() ? 0 : tourCourant.getBoulesLancees() + 1; 
+        // x=a?b:c; équivalent if (a) x=b; else x=c;
     }
 
 }
