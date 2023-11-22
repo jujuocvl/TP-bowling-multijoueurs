@@ -9,7 +9,15 @@ public class PartieMultiJoueurs implements IPartieMultiJoueurs{
 	private int nbJoueur;
 	private int tourJoueurNo;
 	
-	
+	public PartieMultiJoueurs(Map<String, PartieMonoJoueur> lesParties, String[] nomsDesJoueurs, int nbJoueur, int tourJoueurNo) {
+		this.lesParties = lesParties;
+		this.nomsDesJoueurs = nomsDesJoueurs;
+		this.nbJoueur = nbJoueur;
+		this.tourJoueurNo=tourJoueurNo;
+	}
+	public PartieMultiJoueurs() {
+	}
+
 	@Override
 	public String demarreNouvellePartie(String[] nomsDesJoueurs) throws IllegalArgumentException {
 		if (nomsDesJoueurs.length == 0) throw new IllegalArgumentException("Il faut au minimum 1 joueur");
